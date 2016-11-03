@@ -1,0 +1,28 @@
+body {
+  font-size: 1.6rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-large {
+  font-size: 1.9rem;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-pale {
+  color: #999;
+}
+
+dt {
+  font-weight: bold;
+}
+
+ul {
+  list-style: disc inside;
+  margin-left: 2%;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>uBeacSec: Privacy and Security Aspects of the Ultrasound Ecosystem</title>
+    <meta name="description" content="This site hosts material and references on our research on the security and privacy implications of ultrasound-based technology">
+    <meta name="author" content="Vasilios Mavrioudis, Shuang Hao, Yanick Fratantonio, Federico Maggi, Giovanni Vigna, and Christopher Kruegel">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="tweleve columns" style="margin-top: 15%">
+          <div class="text-center">
+            <img src="i/tv.png" alt="Old-fashioned TV set" />
+          </div>
+
+          <br />
+
+          <h1 style="margin-top: 5%;" class="text-center">Privacy and Security Aspects of the Ultrasound Ecosystem</h1>
+
+            <nav class="text-center text-large">
+              <a href="#FAQs">FAQs</a> ·
+              <a href="#Members">Who we are</a> ·
+              <a href="#Publications">Publications and Talks</a> ·
+              <a href="#Downloads">Downloads</a> ·
+              <a href="#Press">Press</a> ·
+              <a href="mailto:hi@ubeacsec.org">Contact us</a>
+            </nav>
+
+          <div class="row">
+            <hr class="four columns offset-by-four" />
+          </div>
+
+          <div class="text-large text-justify">
+            <h4 class="text-center">Gimme some context!</h4>
+          <p>Nowadays users often possess a variety of electronic devices for
+            communication and entertainment. In particular, smartphones are
+            playing an increasingly central role in users' lives: Users carry
+            them everywhere they go and often use them to control other
+            devices. This trend provides incentives for the industry to tackle
+            new challenges, such as <strong>cross-device authentication</strong>, and to develop
+            new monetization schemes. A new technology based on ultrasounds has
+            recently emerged to meet these demands. <strong>Ultrasound technology has a
+              number of desirable features</strong>: it is easy to deploy, flexible, and
+            inaudible by humans. This technology is already utilized in a
+            number of different <strong>real-world applications</strong>, such as device
+            pairing, proximity detection, and <strong>cross-device tracking</strong>.</p>
+
+            <h4 class="text-center">What's the problem?</h4>
+          <p>For the first time, we examine the different facets of
+            ultrasound-based technology. Initially, we discuss how it is
+            already used in the real world, and subsequently examine this
+            emerging technology from the <strong>privacy and security perspectives</strong>. In
+            particular, we first observe that the <strong>lack of OS features results
+              in violations of the principle of least privilege</strong>: an app that
+            wants to use this technology currently needs to require full access
+            to the device microphone. We then analyse real-world Android apps
+            and find that tracking techniques based on ultrasounds suffer from
+            a number of vulnerabilities and are <strong>susceptible to various attacks</strong>.
+            For example, we show that ultrasound cross-device tracking
+            deployments can be abused to perform <strong>stealthy deanonymization
+              attacks</strong> (e.g., to unmask users who browse the Internet through
+            anonymity networks such as Tor), to inject fake or spoofed audio
+            beacons, and to leak a user's private information.</p>
+
+            <h4 class="text-center">Where do we go from here?</h4>
+          <p>Based on our findings, <strong>we introduce several defense mechanisms</strong>. We
+            first propose and implement immediately deployable defenses that
+            empower practitioners, researchers, and everyday users to protect
+            their privacy. In particular, we introduce a <strong>browser extension</strong> and
+            an <strong>Android permission</strong> that enable the user to <strong>selectively suppress
+              frequencies</strong> falling within the ultrasonic spectrum. We then argue
+            for the <strong>standardization of ultrasound beacons</strong>, and we envision a
+            <strong>flexible OS-level API</strong> that addresses both the effortless deployment
+            of ultrasound-enabled applications, and the prevention of existing
+            privacy and security problems.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="FAQs" class="row">
+        <div class="tweleve columns">
+          <h2>Frequently Asked Questions</h2>
+          <dl>
+            <dt>Am I affected?</dt>
+            <dd>Likely not, unless you installed an Android app that uses an
+              ultrasound-based framework and requests access to your
+              microphone.</dd>
+
+            <dt>Aren't ultrasounds bad for my health?</dt>
+            <dd>We're not expert in this matter. Please refer to proper resources.</dd>
+
+            <dt>How widespread is all this?</dt>
+            <dd>We haven't performed large-scale measurements, although some of
+              the apps that embed ultrasound-based frameworks were downloaded
+              by hundreds of thousands users, according to the metadata published
+              on the Google Play Store.</dd>
+
+            <dt>Can this be fixed?</dt>
+            <dd>Yes, but it'll take a long, long time. This is not a software
+              vulnerability that can be fixed by applying a simple patch.
+              Although we have created a <a
+                href="#Downloads">proof-of-concept</a> patch for the Android
+              Open Source Project (AOSP) and a "personal firewall" to prevent
+              your browser's Web API to emit ultrasounds, a holistic action is
+              needed. Decision and policy makers should agree on what's the
+              next step in terms of regulations and standardization, OS vendors
+              and developers should integrate support for ultrasound beacons to
+              provide a transparent API (e.g., like for other physical and data
+              layers such as Bluetooth), and finally developers should adopt
+              such API.
+            </dd>
+          </dl>
+
+          <p class="text-center">
+            <a class="button button-primary" href="mailto:faq@ubeacsec.org">Submit a Question</a>
+          </p>
+        </div>
+      </div>
+
+      <div id="Members" class="row">
+        <div class="tweleve columns">
+          <h2>Who we are</h2>
+
+          <dl>
+            <dt><a href="http://">Vasilios Mavroudis</a>, <a href="https://twitter.com/mavroudisv">@mavroudisv</a></dt>
+            <dd>PhD student, University College London (UCL)</dd>
+
+            <dt><a href="http://">Shuang Hao</a></dt>
+            <dd>Postdoc researcher, University of California, Santa Barbara (UCSB)</dd>
+
+            <dt><a href="http://">Yanick Fratantonio</a>, <a href="https://twitter.com/reyammer">@reyammer</a></dt>
+            <dd>PhD student, University of California, Santa Barbara (UCSB)</dd>
+
+            <dt><a href="http://">Federico Maggi</a>, <a href="https://twitter.com/phretor">@phretor</a></dt>
+            <dd>Professor, Politecnico di Milano (POLIMI)
+              <br />
+              Visiting Researcher at Univeristy of California, Santa Barbara (UCSB)
+            </dd>
+
+            <dt><a href="http://">Giovanni Vigna</a></dt>
+            <dd>Professor, University of California, Santa Barbara (UCSB)</dd>
+
+            <dt><a href="http://">Christopher Kruegel,</a></dt>
+            <dd>Professor, University of California, Santa Barbara (UCSB)</dd>
+          </dl>
+
+        </div>
+      </div>
+
+      <div id="Publications" class="row">
+        <div class="tweleve columns">
+          <h2>Publications and Talks</h2>
+          <p>Vasilios Mavroudis, Shuang Hao, Yanick Fratantonio, Federico
+            Maggi, Giovanni Vigna, and Christopher Kruegel. <em>The
+              Ultrasound Tracking Ecosystem</em>. Report. November 2016. [<a
+              href="downloads/report.pdf">PDF</a>]</p>
+          <p>Vasilios Mavroudis, Shuang Hao, Yanick Fratantonio, Federico
+            Maggi, Giovanni Vigna, and Christopher Kruegel. <em>Talking Behind
+              Your Back: Attacks and Countermeasures of Ultrasonic Cross-device
+              Tracking</em>. <a
+              href="https://www.blackhat.com/eu-16/briefings.html">Blackhat
+              Europe</a>, London, UK, 3–4 November 2016.  [Slides to
+            appear]</p>
+          <p>Vasilios Mavroudis, Shuang Hao, Yanick Fratantonio, Federico
+            Maggi, Giovanni Vigna, and Christopher Kruegel. <em>On the Privacy
+              and Security of the Ultrasound Ecosystem</em>. 17th <a
+              href="https://petsymposium.org">Privacy Enhancing Technologies
+              Symposium</a>, Minneapolis, MN, July 2017. [To appear] (early
+            draft available <a href="hi@ubeacsec.org">upon request</a>)</p>
+        </div>
+      </div>
+
+      <div id="Downloads" class="row">
+        <div class="tweleve columns">
+          <h2>Downloads</h2>
+          <p><strong>Security disclaimer:</strong> the tools and code available
+            on this website are merely meant for proof-of-concept. Although
+            they should help to protect you from ultrasound-based tracking
+            techniques, they are not guaranteed to work in all possible
+            conditions and are probably affected by all security
+            vulnerabilities known to humanity, since we wrote them for the sole
+            purpose of proving the feasibility of some attacks. Download and use
+            at your own risk! :-)</p>
+          <ul>
+            <li>SilverDog: your sound firewall! A chrome extension that we
+              developed to filter ultrasound frequencies. [To be released]</li>
+            <li>Set of AOSP patches to implement a new permission to filter
+              ultrasound spectrum. The patch should apply cleanly against AOSP
+              android-5.0.0_r3. [To be released]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="Press" class="row">
+        <div class="tweleve columns">
+          <h2>Press Coverage</h2>
+          <p>From the most recent one to the first one.</p>
+          <ul>
+            <li>Fortune, Oct 30th, 2016: <a href="http://fortune.com/2016/10/30/soundwave-hacking/">Inaudible Soundwaves Expose a Spooky New Pathway for Hackers</a></li>
+            <li>Boing Boing, Oct 30th, 2016: <a href="https://boingboing.net/2016/10/30/sneaky-ultrasonic-adware-makes.html" class="hyper doc">Sneaky ultrasonic adware makes homes vulnerable to ultrasonic hacking</a></li>
+            <li>Yahoo! Sports: <a href="http://sports.yahoo.com/news/computer-apps-may-keep-listening-224643121.html" class="hyper doc">Some mobile apps continue to track ultrasound signals even when closed</a></li>
+            <li>On The Wire, Oct 30th, 2016:  <a href="https://www.onthewire.io/silently-tracking-users-with-ultrasonic-beacons/" class="hyper doc">Silently Tracking Users With Ultrasonic Beacons</a></li>
+            <li>Digital Trends, <a href="http://www.digitaltrends.com/computing/university-college-london-ultrasonic-cross-device-hacking/" class="hyper doc">Some mobile apps continue to track ultrasound signals even when closed</a></li>
+            <li>Internation Business Times, <a href="http://www.ibtimes.co.uk/silent-hack-devices-can-be-hijacked-using-inaudible-sounds-embedded-into-ads-1589129" class="hyper doc">The silent hack: Devices can be hijacked using inaudible sounds embedded into ads</a></li>
+            <li>Slashdot, Oct 30th, 2016: <a href="http://it.slashdot.org/story/16/10/30/1932216/" class="hyper doc">Serious Hacks Possible Through Inaudible Ultrasound</a></li> 
+            <li>New Scientist, Oct 27th, 2016: <a href="http://www.newscientist.com/article/2110762/" class="hyper doc">Your Home’s Online Gadgets Could Be Hacked by Ultrasound</a></li> 
+          </ul>
+
+          <p><strong>Want to write about this research?</strong> The <a
+              href="downloads/report.pdf">best starting point is our report</a>, as
+            it provides a detailed but easy-to-understand explanation of the
+            essential points.</p>
+        </div>
+      </div>
+
+      <footer class="row text-center text-pale">
+        <div class="tweleve columns">
+          <hr />
+          <p>&copy;2016, all rights are reserved to the respective authors.
+
+            <br />
+
+            <small>No dogs have been harmed during this research, but <a
+                href="i/lara.gif">Lara</a>, our research assistant, played a
+              key role in some experiments.</small></p>
+        </div>
+      </footer>
+    </div>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', "TODO", 'auto');
+			ga('send', 'pageview');
+		</script>
+
+  </body>
+</html>
