@@ -95,49 +95,49 @@
         <div class="tweleve columns">
           <h2>Frequently Asked Questions</h2>
           <dl>
-            <dt>Am I affected?</dt>
-            <dd>Likely not, unless you installed an Android app that uses an
-              ultrasound-based framework and requests access to your
-              microphone.</dd>
+		<dt>Am I affected?</dt>
+		<dd>Likely not, unless you installed an Android app that uses an
+		ultrasound-based framework and requests access to your
+		microphone.</dd>
 
-            <dt>Aren't ultrasounds bad for my health?</dt>
-            <dd>We're not experts in this matter. Please refer to proper resources.</dd>
+		<dt>Aren't ultrasounds bad for my health?</dt>
+		<dd>We're not experts in this matter. Please refer to proper resources.</dd>
 
-            <dt>How widespread is all this?</dt>
-            <dd>We haven't performed large-scale measurements, although some of
-              the apps that embed ultrasound-based frameworks were downloaded
-              by hundreds of thousands users, according to the metadata published
-              on the Google Play Store.</dd>
+		<dt>How widespread is all this?</dt>
+		<dd>We haven't performed large-scale measurements, although some of
+		the apps that embed ultrasound-based frameworks were downloaded
+		by hundreds of thousands users, according to the metadata published
+		on the Google Play Store.</dd>
 
-            <dt>Can this be fixed?</dt>
-            <dd>Yes, but it'll take a long, long time. This is not a software
-              vulnerability that can be fixed by applying a simple patch.
-              Although we have created a <a
-                href="#Downloads">proof-of-concept</a> patch for the Android
-              Open Source Project (AOSP) and a "personal firewall" to prevent
-              your browser's Web API to emit ultrasounds, a holistic action is
-              needed. Decision and policy makers should agree on what's the
-              next step in terms of regulations and standardization, OS vendors
-              and developers should integrate support for ultrasound beacons to
-              provide a transparent API (e.g., like for other physical and data
-              layers such as Bluetooth), and finally developers should adopt
-              such API.
-            </dd>
+		<dt>Can this be fixed?</dt>
+		<dd>Yes, but it'll take a long, long time. This is not a software
+		vulnerability that can be fixed by applying a simple patch.
+		Although we have created a <a
+		href="#Downloads">proof-of-concept</a> patch for the Android
+		Open Source Project (AOSP) and a "personal firewall" to prevent
+		your browser's Web API to emit ultrasounds, a holistic action is
+		needed. Decision and policy makers should agree on what's the
+		next step in terms of regulations and standardization, OS vendors
+		and developers should integrate support for ultrasound beacons to
+		provide a transparent API (e.g., like for other physical and data
+		layers such as Bluetooth), and finally developers should adopt
+		such API.
+		</dd>
 
-			<dt>Is every mobile operating system capable of capturing uBeacons, or just Android?</dt>
-			<dd>It depends more on the hardware of the device (i.e., the microphone) and less on the operating system. The great majority of commercial microphones found in mobile phone can capture uBeacons.
-			Nevertheless, the operating system plays a role as it determines what an application can and can't do. For our research, we worked with Android and we can confirm that it is possible to listen for ultrasounds in the background.
-			We haven't checked iOS, but we cannot exclude either possibilities.</dd>
-			
-			<dt>Do you have information on the actual frequencies these beacons operate on?</dt>
-			<dd>We have seen frameworks listening for beacons starting from 18.000Hz and higher. For instance, a relevant patent can be found <a href="https://www.google.com/patents/US20150215668">here</a>.
-			However, the exact implementation of ultrasound beacons varies between companies.</dd>
+		<dt>Is every mobile operating system capable of capturing uBeacons, or just Android?</dt>
+		<dd>It depends more on the hardware of the device (i.e., the microphone) and less on the operating system. The great majority of commercial microphones found in mobile phone can capture uBeacons.
+		Nevertheless, the operating system plays a role as it determines what an application can and can't do. For our research, we worked with Android and we can confirm that it is possible to listen for ultrasounds in the background.
+		We haven't checked iOS, but we cannot exclude either possibilities.</dd>
+
+		<dt>Do you have information on the actual frequencies these beacons operate on?</dt>
+		<dd>We have seen frameworks listening for beacons starting from 18.000Hz and higher. For instance, a relevant patent can be found <a href="https://www.google.com/patents/US20150215668">here</a>.
+		However, the exact implementation of ultrasound beacons varies between companies.</dd>
+
+
+		<dt>What is the situation now?</dt>
+		<dd>The awesome people at City Frequencies maintain an up to date page on the current status of the ecosystem, as well as present some additional findings: <a href="https://cityfreqs.com.au/pilfer.php">Here!</a>	
+		</dd>
           </dl>
-
-	   <dt>What is the situation now?</dt>
-            <dd>The awesome people at City Frequencies maintain an up to date page on the current status of the ecosystem, as well as present some additional findings: <a href="https://cityfreqs.com.au/pilfer.php">Here!</a>	
-           </dd>
-
 		
 		
           <p class="text-center">
