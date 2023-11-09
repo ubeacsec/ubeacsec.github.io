@@ -1,2 +1,2 @@
 # What's this?
-Public website of [ubeacsec.org](http://ubeacsec.org)
+Public website of our work on ultrasound-enabled tracking
